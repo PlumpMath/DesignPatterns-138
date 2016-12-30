@@ -52,6 +52,10 @@
     <Compile Include="BehaviorDesign\QuackBehavior\MuteQuack.cs" />
     <Compile Include="BehaviorDesign\QuackBehavior\Quack.cs" />
     <Compile Include="BehaviorDesign\QuackBehavior\Squeak.cs" />
+    <Compile Include="ObserverDesign\Observers\CurentConditionsDisplay.cs" />
+    <Compile Include="ObserverDesign\Observers\IDisplay.cs" />
+    <Compile Include="ObserverDesign\Subject\WeatherData.cs" />
+    <Compile Include="ObserverDesign\WeatherEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
