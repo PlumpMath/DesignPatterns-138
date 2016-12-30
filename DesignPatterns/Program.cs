@@ -1,4 +1,5 @@
-﻿using ConsoleApplication1.BehaviorDesign;
+﻿using DesignPatterns.BehaviorDesign;
+using DesignPatterns.ObserverDesign;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -6,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace DesignPatterns
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Duck duck = new MallardDuck();
-            DuckOperations(duck);
+            BehaviorDesignTest();
+            ObserverDesignTest();
+
+            #region Commented Code
 
             //Doer doer = new Doer();
 
@@ -25,8 +28,34 @@ namespace ConsoleApplication1
             //UserInterface rr = new UserInterface();
             //doer.NotiLog += rr.Doer_NotiLog1;
 
-            //doer.DoSomeWork("data");
+            //doer.DoSomeWork("data"); 
+            #endregion
             Console.ReadKey();
+        }
+
+        #region Observer Design Test
+        private static void ObserverDesignTest()
+        {
+            Console.WriteLine("Observer Design Test Start");
+            WeatherData wd = new WeatherData();
+
+            CurentConditionsDisplay cc = new CurentConditionsDisplay(wd);
+
+            wd.SetMeasurements(10, 12, 11);
+
+
+            Console.WriteLine("Observer Design Test End");
+        }
+        #endregion
+
+        #region Behavior Design Test
+        private static void BehaviorDesignTest()
+        {
+            Console.WriteLine("Behavior Design Test Start");
+            Duck duck = new MallardDuck();
+            DuckOperations(duck);
+
+            Console.WriteLine("Behavior Design Test End");
         }
 
         private static void DuckOperations(Duck duck)
@@ -36,6 +65,7 @@ namespace ConsoleApplication1
             duck.PerformQuack();
             duck.Swim();
         }
+        #endregion
     }
     class UserInterface
     {
@@ -70,7 +100,7 @@ namespace ConsoleApplication1
             throw new NotImplementedException();
         }
     }
-    class Doer 
+    class Doer
     {
         //public event delegate NotifySo;
 

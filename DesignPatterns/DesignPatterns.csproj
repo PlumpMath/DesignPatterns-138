@@ -44,14 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BehaviorDesign\Duck.cs" />
-    <Compile Include="BehaviorDesign\Fly\FlyNoWay.cs" />
-    <Compile Include="BehaviorDesign\Fly\FlyWithWings.cs" />
+    <Compile Include="BehaviorDesign\FlyBehavior\FlyNoWay.cs" />
+    <Compile Include="BehaviorDesign\FlyBehavior\FlyWithWings.cs" />
     <Compile Include="BehaviorDesign\Interfaces\IFlyBehavior.cs" />
     <Compile Include="BehaviorDesign\Interfaces\IQuackBehavior.cs" />
     <Compile Include="BehaviorDesign\MallardDuck.cs" />
-    <Compile Include="BehaviorDesign\Quack\MuteQuack.cs" />
-    <Compile Include="BehaviorDesign\Quack\Quack.cs" />
-    <Compile Include="BehaviorDesign\Quack\Squeak.cs" />
+    <Compile Include="BehaviorDesign\QuackBehavior\MuteQuack.cs" />
+    <Compile Include="BehaviorDesign\QuackBehavior\Quack.cs" />
+    <Compile Include="BehaviorDesign\QuackBehavior\Squeak.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

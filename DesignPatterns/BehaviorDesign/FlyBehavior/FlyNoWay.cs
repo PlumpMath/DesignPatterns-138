@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleApplication1.BehaviorDesign.Interfaces;
+using DesignPatterns.BehaviorDesign.Interfaces;
 
-namespace ConsoleApplication1.BehaviorDesign
+namespace DesignPatterns.BehaviorDesign
 {
     public class FlyNoWay : IFlyBehavior
     {

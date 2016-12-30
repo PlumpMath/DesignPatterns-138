@@ -1,11 +1,11 @@
-﻿using ConsoleApplication1.BehaviorDesign.Interfaces;
+﻿using DesignPatterns.BehaviorDesign.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1.BehaviorDesign
+namespace DesignPatterns.BehaviorDesign
 {
     public class Quack : IQuackBehavior
     {
