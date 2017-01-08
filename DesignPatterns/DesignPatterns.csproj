@@ -52,6 +52,15 @@
     <Compile Include="BehaviorDesign\QuackBehavior\MuteQuack.cs" />
     <Compile Include="BehaviorDesign\QuackBehavior\Quack.cs" />
     <Compile Include="BehaviorDesign\QuackBehavior\Squeak.cs" />
+    <Compile Include="DecoratorDesign\Beverage.cs" />
+    <Compile Include="DecoratorDesign\Components\DarkRoast.cs" />
+    <Compile Include="DecoratorDesign\Components\Decaf.cs" />
+    <Compile Include="DecoratorDesign\Components\Espresso.cs" />
+    <Compile Include="DecoratorDesign\Components\HouseBlend.cs" />
+    <Compile Include="DecoratorDesign\Decorators\CondimentDecorator.cs" />
+    <Compile Include="DecoratorDesign\Decorators\Mocha.cs" />
+    <Compile Include="DecoratorDesign\Decorators\Soy.cs" />
+    <Compile Include="DecoratorDesign\Decorators\Whip.cs" />
     <Compile Include="ObserverDesign\Observers\CurentConditionsDisplay.cs" />
     <Compile Include="ObserverDesign\Observers\IDisplay.cs" />
     <Compile Include="ObserverDesign\Subject\WeatherData.cs" />

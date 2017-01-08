@@ -1,4 +1,6 @@
 ﻿using DesignPatterns.BehaviorDesign;
+using DesignPatterns.DecoratorDesign;
+using DesignPatterns.DecoratorDesign.Decorators;
 using DesignPatterns.ObserverDesign;
 using System;
 using System.Collections.Concurrent;
@@ -13,6 +15,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            DecoderDesignTest();
             BehaviorDesignTest();
             ObserverDesignTest();
 
@@ -33,6 +36,19 @@ namespace DesignPatterns
             Console.ReadKey();
         }
 
+        private static void DecoderDesignTest()
+        {
+            Console.WriteLine("Decorator Design Test Start");
+            Beverage bevrage = new Espresso();
+            bevrage = new Mocha(bevrage);
+            bevrage = new Mocha(bevrage);
+            bevrage = new Whip(bevrage);
+            bevrage = new Soy(bevrage);
+
+            Console.WriteLine($"Description: {bevrage.GetDescription()}, Cost: {bevrage.Cost()}");
+            Console.WriteLine("Decorator Design Test End\n");
+        }
+
         #region Observer Design Test
         private static void ObserverDesignTest()
         {
@@ -44,7 +60,7 @@ namespace DesignPatterns
             wd.SetMeasurements(10, 12, 11);
 
 
-            Console.WriteLine("Observer Design Test End");
+            Console.WriteLine("Observer Design Test End\n");
         }
         #endregion
 
@@ -54,8 +70,13 @@ namespace DesignPatterns
             Console.WriteLine("Behavior Design Test Start");
             Duck duck = new MallardDuck();
             DuckOperations(duck);
+            Console.WriteLine();
 
-            Console.WriteLine("Behavior Design Test End");
+            duck = new MallardDuck();
+            duck.SetFlyBehavior(new FlyNoWay());
+            duck.SetQuackBehavior(new MuteQuack());
+            DuckOperations(duck);
+            Console.WriteLine("Behavior Design Test End\n");
         }
 
         private static void DuckOperations(Duck duck)
