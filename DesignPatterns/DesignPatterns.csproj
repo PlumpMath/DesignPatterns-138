@@ -43,6 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactoryDesign\PizzaTypes\CalmPizza.cs" />
+    <Compile Include="AbstractFactoryDesign\PizzaTypes\CheesePizza.cs" />
+    <Compile Include="AbstractFactoryDesign\PizzaIngredientFactory\ChicagoPizzaIngredientFactory.cs" />
+    <Compile Include="AbstractFactoryDesign\Interfaces\ICalms.cs" />
+    <Compile Include="AbstractFactoryDesign\Interfaces\ICheese.cs" />
+    <Compile Include="AbstractFactoryDesign\Interfaces\IDough.cs" />
+    <Compile Include="AbstractFactoryDesign\Interfaces\IPizzaIngredientFactory.cs" />
+    <Compile Include="AbstractFactoryDesign\Interfaces\ISauce.cs" />
+    <Compile Include="AbstractFactoryDesign\PizzaIngredientFactory\NYPizzaIngredientFactory.cs" />
+    <Compile Include="AbstractFactoryDesign\NYPizzaStore.cs" />
+    <Compile Include="AbstractFactoryDesign\PizzaTypes\PepperoniPizza.cs" />
+    <Compile Include="AbstractFactoryDesign\PizzaTypes\Pizza.cs" />
+    <Compile Include="AbstractFactoryDesign\PizzaStore.cs" />
+    <Compile Include="AbstractFactoryDesign\PizzaTypes\VeggiePizza.cs" />
     <Compile Include="BehaviorDesign\Duck.cs" />
     <Compile Include="BehaviorDesign\FlyBehavior\FlyNoWay.cs" />
     <Compile Include="BehaviorDesign\FlyBehavior\FlyWithWings.cs" />
