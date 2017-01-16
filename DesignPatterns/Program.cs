@@ -1,4 +1,6 @@
 ﻿using DesignPatterns.BehaviorDesign;
+using DesignPatterns.CommandDesign;
+using DesignPatterns.CommandDesign.Commands;
 using DesignPatterns.DecoratorDesign;
 using DesignPatterns.DecoratorDesign.Decorators;
 using DesignPatterns.ObserverDesign;
@@ -18,7 +20,7 @@ namespace DesignPatterns
             DecoderDesignTest();
             BehaviorDesignTest();
             ObserverDesignTest();
-
+            CommandDesignTest();
             #region Commented Code
 
             //Doer doer = new Doer();
@@ -36,6 +38,21 @@ namespace DesignPatterns
             Console.ReadKey();
         }
 
+        private static void CommandDesignTest()
+        {
+            Console.WriteLine("Command Design Test Start");
+            RemoteControl remote = new RemoteControl();
+
+            Light light = new Light();
+
+            LightOnCommand command1 = new LightOnCommand(light);
+            LightOffCommand command2 = new LightOffCommand(light);
+            remote.SetCommand(1, command1, command2);
+            remote.OnButtonPressed(1);
+
+            remote.Undo();
+            Console.WriteLine("Command Design Test End\n");
+        }
         private static void DecoderDesignTest()
         {
             Console.WriteLine("Decorator Design Test Start");

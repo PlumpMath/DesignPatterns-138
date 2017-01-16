@@ -66,6 +66,12 @@
     <Compile Include="BehaviorDesign\QuackBehavior\MuteQuack.cs" />
     <Compile Include="BehaviorDesign\QuackBehavior\Quack.cs" />
     <Compile Include="BehaviorDesign\QuackBehavior\Squeak.cs" />
+    <Compile Include="CommandDesign\Commands\LightOffCommand.cs" />
+    <Compile Include="CommandDesign\Commands\LightOnCommand.cs" />
+    <Compile Include="CommandDesign\Commands\NoCommand.cs" />
+    <Compile Include="CommandDesign\Interfaces\ICommand.cs" />
+    <Compile Include="CommandDesign\Light.cs" />
+    <Compile Include="CommandDesign\RemoteControl.cs" />
     <Compile Include="DecoratorDesign\Beverage.cs" />
     <Compile Include="DecoratorDesign\Components\DarkRoast.cs" />
     <Compile Include="DecoratorDesign\Components\Decaf.cs" />
