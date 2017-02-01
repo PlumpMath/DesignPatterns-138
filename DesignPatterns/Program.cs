@@ -4,6 +4,7 @@ using DesignPatterns.CommandDesign.Commands;
 using DesignPatterns.DecoratorDesign;
 using DesignPatterns.DecoratorDesign.Decorators;
 using DesignPatterns.ObserverDesign;
+using DesignPatterns.TemplateDesign;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace DesignPatterns
             BehaviorDesignTest();
             ObserverDesignTest();
             CommandDesignTest();
+            TemplateDesignTest();
             #region Commented Code
 
             //Doer doer = new Doer();
@@ -37,7 +39,23 @@ namespace DesignPatterns
             #endregion
             Console.ReadKey();
         }
+        private static void TemplateDesignTest()
+        {
+            Console.WriteLine("Template Design Test Start");
+            CaffeineBeverage cfb = new Tea();
+            cfb.PrepareRecipe();
 
+
+            cfb = new Coffee();
+            cfb.PrepareRecipe();
+
+            //CaffeineBeverageWithHook cfbh = new TeaWithHook();
+            //cfbh.PrepareRecipe();
+
+            //cfbh = new CoffeeWithHook();
+            //cfbh.PrepareRecipe();
+            Console.WriteLine("Template Design Test End\n");
+        }
         private static void CommandDesignTest()
         {
             Console.WriteLine("Command Design Test Start");

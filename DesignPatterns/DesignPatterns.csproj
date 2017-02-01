@@ -87,6 +87,12 @@
     <Compile Include="ObserverDesign\WeatherEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateDesign\CaffeineBeverage.cs" />
+    <Compile Include="TemplateDesign\CaffeineBeverageWithHook.cs" />
+    <Compile Include="TemplateDesign\Coffee.cs" />
+    <Compile Include="TemplateDesign\CoffeeWithHook.cs" />
+    <Compile Include="TemplateDesign\Tea.cs" />
+    <Compile Include="TemplateDesign\TeaWithHook.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
